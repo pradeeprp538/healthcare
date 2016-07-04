@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-<title>Insert title here</title>
+<title>Devi Hospitals</title>
 <jsp:include page="commons/css.jsp"/>
 </head>
 <body class="skin-blue sidebar-mini">
@@ -16,71 +16,99 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Page Header
+            Dash Board
            
         </section>
 
         <!-- Main content -->
         <section class="content">
 
-          <!-- Your Page Content Here -->
-          <div class="box box-primary">
-                <div class="box-header">
-                  <h3 class="box-title">Quick Example</h3>
-                </div><!-- /.box-header -->
-                <!-- form start -->
-                <form action="/HealthCare/submitBill" method="post" role="form">
-                  <div class="box-body">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Patient Name</label>
-                      <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
-                    </div>
-                    <div class="form-group">
-                      <label for="Age">Age</label>
-                      <input type="text" class="form-control" name="age" id="age" placeholder="Age">
-                    </div>
- <!--                    <div class="form-group">
-                      <label for="exampleInputFile">File input</label>
-                      <input type="file" id="exampleInputFile">
-                      <p class="help-block">Example block-level help text here.</p>
-                    </div> -->
-                    <div class="form-group">
-                       <label for="sex">Sex</label>
-                      <div class="radio">
-                        <label><input type="radio"  name="sex" id="sex-m" value="M">M</label>
-                        <label><input type="radio" name="sex" id="sex-f" value="F">F</label>
-                      </div>
-                      <div class="form-group">
-                      <label for="MobileNumber">Mobile Number</label>
-                      <input type="text"  maxlength="10" name="mobileNumber" class="form-control" id="mobileNumber" placeholder="Mobile Number">
-                    </div>
-                    <div class="form-group">
-                      <label for="MobileNumber">Bill Amount</label>
-                      <input type="text" class="form-control" name="billAmount" id="billAmount" placeholder="Bill Amount">
-                    </div>
-                      <!-- <div class="radio">
-                        <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="F">F</label>
-                      </div> -->
-                      <!-- <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
-                          Option three is disabled
-                        </label>
-                      </div> -->
-                    </div>
-                    <!-- <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Check me out
-                      </label>
-                    </div> -->
-                  </div><!-- /.box-body -->
 
-                  <div class="box-footer">
-                    <button type="reset" class="btn btn-primary">Reset</button> 
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-                </form>
+
+          <!-- Your Page Content Here -->
+          <div class="row">
+          <div class="col-lg-3 col-xs-6" >
+         <div class="small-box bg-yellow" style="width: 1100px;">
+                <div class="inner">
+                  <h3>Patient Registration</h3>
+                  <p>Registration</p>
+                </div>
+                <div class="icon">
+                   <i class="ion ion-person-add"></i>
+                </div>
+                <a href="http://localhost:8080/HealthCare/register" class="small-box-footer">
+                  Register a Patient <i class="fa fa-arrow-circle-right"></i>
+                </a>
+                <!-- <a href="http://localhost:8080/HealthCare/register" class="small-box-footer" style="width: 550px; bottom: 300px; ">
+                  Out Patient <i class="fa fa-arrow-circle-right"></i>
+                </a> -->
               </div>
+              </div>
+              </div>
+              <br>
+              
+              
+              <div class="row">
+              
+              <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-red" style="width: 550px;">
+                <div class="inner">
+                  <h3>All Patients</h3>
+                  <p>Patients</p>
+                </div>
+                <div class="icon">
+                  <i class="glyphicon glyphicon-user w3-large"></i>
+                </div>
+                <a href="http://localhost:8080/HealthCare/allPatients" class="small-box-footer">Search All Patients <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+          
+          <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-aqua pullright" style="left: 275px; width: 545px;">
+                <div class="inner">
+                  <h3>Generate Bill</h3>
+                  <p>Bills</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-bag"></i>
+                </div>
+                <a href="http://localhost:8080/HealthCare/generateBill" class="small-box-footer">Generate Bill for a Registered Patient <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+              
+              <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-blue" style="width: 550px;">
+                <div class="inner">
+                  <h3>In Patients</h3>
+                  <p>I.P</p>
+                </div>
+                <div class="icon">
+                  <i class="glyphicon glyphicon-user w3-large"></i>
+                </div>
+                <a href="javascript:void(0)" class="small-box-footer">Search In Patients <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+          
+          <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-green pullright" style="left: 275px; width: 545px;">
+                <div class="inner">
+                  <h3>Out Patients</h3>
+                  <p>O.P</p>
+                </div>
+                <div class="icon">
+                  <i class="glyphicon glyphicon-user w3-large"></i>
+                </div>
+                <a href="http://localhost:8080/HealthCare/outPatients" class="small-box-footer">Search Out Patients <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+          </div>
 
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->

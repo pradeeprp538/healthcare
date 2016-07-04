@@ -32,6 +32,42 @@ public class DashboardController {
 		return "dashboard";
 	}
 	
+	@RequestMapping(value="/register")
+	public String register(){
+		return "register";
+	}
+	
+	@RequestMapping(value="/allPatients")
+	public String allPatients(){
+		return "allpatients";
+	}
+	
+	@RequestMapping(value="/inPatients")
+	public String inPatients(){
+		return "inpatients";
+	}
+	
+	@RequestMapping(value="/outPatients")
+	public String outPatients(){
+		return "outpatients";
+	}
+	
+	@RequestMapping(value="/profile")
+	public String patientProfile(){
+		return "patientprofile";
+	}
+	
+	@RequestMapping(value="/generateBill")
+	public String generateBill(){
+		return "generatebill";
+	}
+	
+	@RequestMapping(value="/billGeneration")
+	public String getPatientDetails(){
+		return "billgeneration";
+	}
+	
+	
 	@RequestMapping(value="/submitBill")
 	public String registerUser(HttpServletRequest request, HttpServletResponse response){
 		
@@ -45,7 +81,7 @@ public class DashboardController {
 		
 		logger.debug("name: " +name + "age: " + age);
 		
-		Billingdetails billingdetails = new Billingdetails();
+		/*Billingdetails billingdetails = new Billingdetails();
 		billingdetails.setAmount("100");
 		billingdetails.setName("AA");
 		
@@ -57,7 +93,7 @@ public class DashboardController {
 		userbilling.setDate(new Timestamp(new Date().getTime()));
 		userbilling.setBillingdetailses(billingdetailses);
 		
-		billingdetails.setUserbilling(userbilling);
+		billingdetails.setUserbilling(userbilling);*/
 		
 		User user = new User();
 		user.setAge(age);
@@ -65,10 +101,10 @@ public class DashboardController {
 		user.setSex(sex);
 		user.setName(name);
 		user.setPhoneNumber(mobileNumber);
-		userbilling.setUser(user);
+		/*userbilling.setUser(user);
 		Set<Userbilling> userbillings = new LinkedHashSet<Userbilling>();
 		userbillings.add(userbilling);
-		user.setUserbillings(userbillings);
+		user.setUserbillings(userbillings);*/
 		
 		dashboardService.registerUser(user);
 		
